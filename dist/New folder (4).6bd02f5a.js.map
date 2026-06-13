@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAM,MAAM;IACR,OACI;AAER;KAJM","sources":["App.js"],"sourcesContent":["const App = ()=>{\r\n    return (\r\n        div\r\n    )\r\n}"],"names":[],"version":3,"file":"New folder (4).6bd02f5a.js.map","sourceRoot":"/__parcel_source_root/"}
