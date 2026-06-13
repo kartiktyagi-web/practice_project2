@@ -152,3 +152,108 @@
         gap: 18px;
     }
 }
+
+/* Detail Shimmer Styles */
+.shimmer-back-button {
+    display: inline-block;
+    width: 120px;
+    height: 44px;
+    margin-bottom: 32px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-back-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}
+
+.shimmer-detail-image {
+    width: 48%;
+    max-width: 520px;
+    min-width: 320px;
+    height: 360px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-detail-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}
+
+.shimmer-title {
+    height: 48px;
+    width: 300px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    border-radius: 8px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}
+
+.details-text .shimmer-line {
+    height: 18px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.details-text .shimmer-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}
+
+.shimmer-border-line {
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-border-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}

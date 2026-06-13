@@ -52,9 +52,9 @@ a {
 .countries-container {
     max-width: 1200px;
     margin-top: 16px;
-    display: flex;
-    gap: 64px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 32px;
     margin-inline: auto;
     justify-content: space-between;
 }
@@ -159,4 +159,86 @@ a {
         flex-direction: column;
     }
     
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.pagination-controls button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pagination-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.pagination-controls span {
+    font-weight: 600;
+}
+
+/* Shimmer placeholder styles */
+.shimmer-list .country-card {
+    pointer-events: none;
+    background: var(--elements-color);
+}
+
+.shimmer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+    animation: shimmer 1s linear infinite;
+}
+
+.shimmer-flag {
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+}
+
+.shimmer-line {
+    height: 14px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03), rgba(0,0,0,0.06));
+    margin: 8px 0;
+    border-radius: 4px;
+}
+
+.title-line {
+    height: 20px;
+    width: 70%;
+    margin-top: 12px;
+}
+
+.shimmer-line.short {
+    width: 60%;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
 }
